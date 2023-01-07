@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=各自ご自身のURIに置き換えてください！
+      - REPOSITORY_URI=656620409741.dkr.ecr.ap-northeast-1.amazonaws.com/docker-test
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
 
   build:
